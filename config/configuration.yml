@@ -49,16 +49,16 @@ default:
   # This might require some additional configuration. See the guides at:
   # http://www.redmine.org/projects/redmine/wiki/EmailConfiguration
   #
-   email_delivery:
-     delivery_method: :smtp
-     smtp_settings:
-       enable_starttls_auto: true
-       address: "smtp.gmail.com"
-       port: 587
-       domain: "smtp.gmail.com" # 'your.domain.com' for GoogleApps
-       authentication: :plain
-       user_name: ENV['GMAIL_ADDRESS']
-       password: ENV['GMAIL_PASSWORD']
+  email_delivery:
+    delivery_method: :smtp
+    smtp_settings:
+      enable_starttls_auto: true
+      address: "smtp.gmail.com"
+      port: 587
+      domain: "smtp.gmail.com" # 'your.domain.com' for GoogleApps
+      authentication: :plain
+      user_name: ENV['GMAIL_ADDRESS']
+      password: ENV['GMAIL_PASSWORD']
   #
   # ==== Sendmail command
   #

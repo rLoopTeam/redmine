@@ -67,13 +67,13 @@ if File.exist?(database_file)
       when /postgresql/
         gem "pg", "~> 0.18.1", :platforms => [:mri, :mingw, :x64_mingw]
         gem "activerecord-jdbcpostgresql-adapter", :platforms => :jruby
-      when /sqlite3/
-        gem "sqlite3", :platforms => [:mri, :mingw, :x64_mingw]
-        gem "jdbc-sqlite3", ">= 3.8.10.1", :platforms => :jruby
-        gem "activerecord-jdbcsqlite3-adapter", :platforms => :jruby
-      when /sqlserver/
-        gem "tiny_tds", "~> 0.6.2", :platforms => [:mri, :mingw, :x64_mingw]
-        gem "activerecord-sqlserver-adapter", :platforms => [:mri, :mingw, :x64_mingw]
+      # when /sqlite3/
+      #   gem "sqlite3", :platforms => [:mri, :mingw, :x64_mingw]
+      #   gem "jdbc-sqlite3", ">= 3.8.10.1", :platforms => :jruby
+      #   gem "activerecord-jdbcsqlite3-adapter", :platforms => :jruby
+      # when /sqlserver/
+      #   gem "tiny_tds", "~> 0.6.2", :platforms => [:mri, :mingw, :x64_mingw]
+      #   gem "activerecord-sqlserver-adapter", :platforms => [:mri, :mingw, :x64_mingw]
       else
         warn("Unknown database adapter `#{adapter}` found in config/database.yml, use Gemfile.local to load your own database gems")
       end

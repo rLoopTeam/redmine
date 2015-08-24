@@ -47,6 +47,8 @@ module RedmineApp
     # Do not include all helpers
     config.action_controller.include_all_helpers = false
 
+    config.assets.initialize_on_precompile = false 
+
     # XML parameter parser removed from core in Rails 4.0
     # and extracted to actionpack-xml_parser gem
     config.middleware.insert_after ActionDispatch::ParamsParser, ActionDispatch::XmlParamsParser
@@ -58,9 +60,6 @@ module RedmineApp
     # See http://guides.rubyonrails.org/caching_with_rails.html#cache-stores
     # for more options (same options as config.cache_store).
     config.redmine_search_cache_store = :memory_store
-
-
-    config.assets.initialize_on_precompile = false
 
     # Configure log level here so that additional environment file
     # can change it (environments/ENV.rb would take precedence over it)
